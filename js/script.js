@@ -15,3 +15,15 @@ let pokemonList = [
         types: 'Ice'
     }
 ];
+
+for (let i = 0; i < pokemonList.length; i++) {
+    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")");
+    if (pokemonList[i].height > 1.5) {
+        document.write(" - Wow! That's big!" + "<br>")
+    }
+    else {
+        document.write("<br>")
+    }
+    
+}
+
