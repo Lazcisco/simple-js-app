@@ -49,7 +49,6 @@ let pokemonRepository = (function () {
         return fetch(url).then(function (response) {
           return response.json();
         }).then(function (details) {
-          // Now we add the details to the item
           item.imageUrl = details.sprites.front_default;
           item.height = details.height;
           item.types = details.types;
@@ -69,16 +68,7 @@ let pokemonRepository = (function () {
 })();
 
 pokemonRepository.loadList().then(function() {
-    // Now the data is loaded!
     pokemonRepository.getAll().forEach(function(pokemon){
       pokemonRepository.addListItem(pokemon);
     });
   });
-
-console.log(pokemonRepository.getAll())
-
-pokemonRepository.getAll().forEach (function(pokemon) {
-    pokemonRepository.addListItem(pokemon)
-});
-
-
