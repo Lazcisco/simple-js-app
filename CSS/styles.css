@@ -35,7 +35,7 @@ h1 {
 
 #modal-container.is-visible {
   position: fixed;
-  padding: 20px;
+  padding: 20px 0 0 0;
   box-sizing: border-box;
   top: 0;
   left: 0;
@@ -50,18 +50,16 @@ h1 {
   overflow: auto;
 
   display: grid;
-  text-align: center;
 }
 
 .modal {
   margin: auto;
-  display: inline-block;
   box-sizing: border-box;
   background: #fff;
   padding: 15px;
   width: 100%;
   max-width: 700px;
-  text-align: left;
+  float: left;
 }
 
 .modal-close {
@@ -77,6 +75,6 @@ h1 {
   margin-top: 0;
 }
 
-.modal p {
-  margin-bottom: 0;
+#myImage {
+  text-align: center;
 }
