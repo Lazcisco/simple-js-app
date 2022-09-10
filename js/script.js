@@ -20,7 +20,7 @@ let pokemonRepository = (function () {
     let listItem = document.createElement("li");
     let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add("btn-primary", "btn");
+    button.classList.add("btn-primary", "btn", "m-1");
     button.setAttribute("data-bs-toggle", "modal");
     button.setAttribute("data-bs-target", "#modal-container");
     listItem.classList.add("group-list-item");
@@ -92,54 +92,7 @@ let modal = (function () {
     modalBody.innerHTML = `<h5>${text}</h5> <img src="${image}">`;
   }
 
-  function hideModal() {
-    let modalContainer = document.querySelector("#modal-container");
-    modalContainer.classList.remove("is-visible");
-  }
-
-  window.addEventListener("keydown", (e) => {
-    let modalContainer = document.querySelector("#modal-container");
-    if (e.key === "Escape" && modalContainer.classList.contains("is-visible")) {
-      hideModal();
-    }
-  });
-
   return {
     showModal: showModal,
-    hideModal: hideModal,
   };
 })();
-
-// let modalContainer = document.querySelector("#modal-container");
-// modalContainer.innerHTML = "";
-
-// let modal = document.createElement("div");
-// modal.classList.add("modal");
-
-// let closeButtonElement = document.createElement("button");
-// closeButtonElement.classList.add("btn");
-// closeButtonElement.innerText = "Close";
-// closeButtonElement.addEventListener("click", hideModal);
-
-// let titleElement = document.createElement("h1");
-// titleElement.innerText = title;
-
-// let contentElement = document.createElement("P");
-// contentElement.setAttribute("id", "height");
-// contentElement.innerText = text;
-
-// modal.appendChild(closeButtonElement);
-// modal.appendChild(titleElement);
-
-// modal.appendChild(contentElement);
-
-// modalContainer.appendChild(modal);
-
-// modalContainer.classList.add("is-visible");
-
-// modalContainer.addEventListener("click", (e) => {
-//   let target = e.target;
-//   if (target === modalContainer) {
-//     hideModal();
-//   }
-// });
