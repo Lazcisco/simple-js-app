@@ -78,7 +78,7 @@
       };
     }
 
-    return iterator
+    return iteratora
   }
 
   function Headers(headers) {
